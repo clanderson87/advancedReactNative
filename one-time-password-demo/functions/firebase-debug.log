@@ -1,0 +1,45 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy --project one-time-password-demo
+[debug] CLI Version:  3.6.1
+[debug] Platform:     darwin
+[debug] Node Version: v6.9.4
+[debug] Time:         Sun Apr 23 2017 21:57:02 GMT-0500 (CDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/one-time-password-demo  
+ Sun Apr 23 2017 21:57:02 GMT-0500 (CDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/one-time-password-demo/tokens  
+ Sun Apr 23 2017 21:57:04 GMT-0500 (CDT)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'one-time-password-demo'...
+[info] 
+[info] i  deploying functions
+[debug] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~4.1.2",
+    "firebase-functions": "^0.5",
+    "twilio": "^3.0.0-rc.13"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/one-time-password-demo?view=CONSUMER_VIEW  
+ Sun Apr 23 2017 21:57:06 GMT-0500 (CDT)
+[debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/one-time-password-demo?view=CONSUMER_VIEW  
+ Sun Apr 23 2017 21:57:06 GMT-0500 (CDT)
+[debug] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/one-time-password-demo  
+ Sun Apr 23 2017 21:57:08 GMT-0500 (CDT)
+[debug] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/one-time-password-demo/apiKeys  
+ Sun Apr 23 2017 21:57:08 GMT-0500 (CDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] <<< HTTP RESPONSE 200
