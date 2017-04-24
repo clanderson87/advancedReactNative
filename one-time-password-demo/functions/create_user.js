@@ -1,5 +1,4 @@
 const admin = require('firebase-admin');
-
 module.exports = (req, res) => {
   //verify the user provided a phone
   if(!req.body.phone) {
