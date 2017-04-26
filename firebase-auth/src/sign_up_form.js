@@ -7,12 +7,14 @@ import { ROOT_URL, CREATE, REQUEST_CODE, VERIFY } from '../secrets/GCF_URLS';
 class SignUpForm extends Component {
   state = { phone: ''}
 
-  handleSubmit = () => {
-    const phoneObj = { phone: this.state.phone }
-    axios.post(`${ROOT_URL}${CREATE}`, phoneObj)
-      .then(() => {
-        axios.post(`${ROOT_URL}${REQUEST_CODE}`, phoneObj)
-      })
+  handleSubmit = async () => {
+    const phoneObj = { phone: this.state.phone };
+    try {
+      await axios.post(`${ROOT_URL}${CREATE}`, phoneObj);
+      await axios.post(`${ROOT_URL}${REQUEST_CODE}`, phoneObj)
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   render() {
