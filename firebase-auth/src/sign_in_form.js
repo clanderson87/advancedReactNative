@@ -10,8 +10,8 @@ class SignInForm extends Component {
   handleSubmit = async () => {
     const sendObj = { phone: this.state.phone, code: this.state.code };
     try {
-      console.log()
       let { data } = await axios.post(`${ROOT_URL}${VERIFY}`, sendObj);
+      
       firebase.auth().signInWithCustomToken(data.token);
     } catch (err) {
       console.log(err);
